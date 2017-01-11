@@ -10,7 +10,11 @@ function LunchCheckController($scope) {
     
   $scope.check = function () {
       var foodArray = $scope.food.split(",")
-      if (foodArray.length <= 3) {
+      if ($scope.food === "") {
+          $scope.checkResponse = "Please Enter Data First!"
+          console.log(foodArray.length);
+      }
+      else if (foodArray.length <= 3) {
           $scope.checkResponse = "Enjoy!";
       }
       else {
