@@ -13,9 +13,16 @@
       <!-- Searchable Shopping List: -->
       <h3>Shopping List:</h3>
       <input type="text" ng-model="search">
+<!--
       <ul>
         <li ng-repeat="item in shoppingList| filter : search">{{ item }}</li>
       </ul>
+-->
+        <ul>
+            <li ng-repeat="item in shoppingList2 | filter : search">
+                name: {{item.name}} <br>
+                quantity: {{item.quantity}}</li>
+        </ul>
     </div>
   </body>
 </html>
